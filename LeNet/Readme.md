@@ -1,0 +1,10 @@
+
+LeNet-5, from the paper Gradient-Based Learning Applied to Document Recognition, is a very efficient convolutional neural network for handwritten character recognition.
+
+Paper: [Gradient Based Learning Applied](https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)
+
+Authors: Yann LeCun, Léon Bottou, Yoshua Bengio, and Patrick Haffner
+Published in: Proceedings of the IEEE (1998)
+
+Google Collab --->>> [Notebook](https://colab.research.google.com/drive/1KZZs95W6834GoMvLmOIyOeCKSiRnerWE?usp=sharing)
+
