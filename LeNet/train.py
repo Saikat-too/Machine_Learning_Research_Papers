@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torchvision
 import torch.optim as optim
-import torch.optim.lr_scheduler as StepLR
+from torch.optim.lr_scheduler import StepLR
 
 from model import LeNet
 from dataset import get_mnist_dataloader
@@ -23,10 +23,10 @@ train_loader , test_loader = get_mnist_dataloader()
 # Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
-scheduler = StepLR(optimizer, step_size=1, gamma=0.7)
+# scheduler = StepLR(optimizer, step_size=1, gamma=0.7)
 
 # Training loop
-def train(model, train_loader, criterion, optimizer, scheduler ,  epochs=5):
+def train(model, train_loader, criterion, optimizer ,  epochs=5):
     model.train()
     for epoch in range(epochs):
         running_loss = 0.0
@@ -44,9 +44,9 @@ def train(model, train_loader, criterion, optimizer, scheduler ,  epochs=5):
                 print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 100:.3f}')
                 running_loss = 0.0
 
-        scheduler.step()
+        # scheduler.step()
 
-train(model , train_loader , criterion , optimizer , scheduler)
+train(model , train_loader , criterion , optimizer )
 print('Finished Training')
 
 # save the trained model
