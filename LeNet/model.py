@@ -1,6 +1,10 @@
 import torch
 import torch.nn as nn
+# LeNet Architecture ---->>
 
+# 1*32*32 input -> (5,5) kernel , s = 2 , p = 0 -> avg pool s = 2 , p = 0 -> (5,5) kernel , s = 1 , p = 0 -> avg pool s = 2 , p = 0
+
+# Cnv 5 X 5 to 120 channels X Linear 84 X Linear 10
 class LeNet(nn.Module):
   def __init__ (self):
     super(LeNet , self).__init__()
